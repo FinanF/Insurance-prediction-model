@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  spark_job:
+    build:
+      context: ./spark_job
+      dockerfile: Dockerfile
+    container_name: spark_job
+
+  streamlit_app:
+    build:
+      context: ./streamlit_app
+      dockerfile: Dockerfile
+    container_name: streamlit_app
+    ports:
+      - "8501:8501"
+
+  spark_api:
+    build:
+      context: ./spark_api
+      dockerfile: Dockerfile
+    container_name: spark_api
+    ports:
+      - "5000:5000"
+    depends_on:
+      - spark_job
