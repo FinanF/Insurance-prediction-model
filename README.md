@@ -1,7 +1,7 @@
 
-# Insureance prediction model
+# Insurance prediction model
 
-Insureance prediction model using Spark LinearRegression, designed for AWS EC2 instance deployment.
+Insurance prediction model using Spark LinearRegression, designed for AWS EC2 instance deployment.
 
 ## Deployment
 
